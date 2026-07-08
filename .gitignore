@@ -1,72 +1,38 @@
-# Virtual Environment
-venv/
-.venv/
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# Python Cache
-__pycache__/
-*.py[cod]
-*$py.class
+# Dependencies
+node_modules
+.pnp
+.pnp.js
 
-# Environment Variables
+# Local env files
 .env
-
-# VS Code
-.vscode/
-
-# PyCharm
-.idea/
-
-# Jupyter
-.ipynb_checkpoints/
-
-# Build Files
-build/
-dist/
-*.egg-info/
-
-# Logs
-*.log
-
-# OS Files
-.DS_Store
-Thumbs.db
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # Testing
-.pytest_cache/
-.coverage
-htmlcov/
+coverage
 
-# Mypy
-.mypy_cache/
+# Turbo
+.turbo
 
-# Ruff
-.ruff_cache/
+# Vercel
+.vercel
 
-# Temporary Files
-temp/
-tmp/
+# Build Outputs
+.next/
+out/
+build
+dist
 
-# Model Files (future)
-models/
-*.pt
-*.pth
-*.bin
 
-# Hugging Face Cache
-.cache/
-huggingface/
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# Gemini / AI Generated Outputs
-outputs/
-
-# Local Database (future)
-*.db
-*.sqlite3
-
-# Environment Configs
-.env.local
-.env.production
-
-# Secrets
-secrets.json
-credentials.json
+# Misc
+.DS_Store
+*.pem
