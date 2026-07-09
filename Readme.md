@@ -1,3 +1,12 @@
+## Quick Start
+
+```sh
+pnpm install
+pnpm dev
+```
+
+
+
 # Turborepo starter
 
 This Turborepo starter is maintained by the Turborepo core team.
@@ -18,6 +27,7 @@ This Turborepo includes the following packages/apps:
 
 - `docs`: a [Next.js](https://nextjs.org/) app
 - `web`: another [Next.js](https://nextjs.org/) app
+- `api`: a FastAPI backend for stock analysis and AI summaries
 - `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
 - `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
@@ -78,6 +88,12 @@ With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#gl
 cd my-turborepo
 turbo dev
 ```
+
+This will also start the FastAPI backend from `apps/api` once its Python dependencies are installed and the backend venv is activated in the shell running Turbo.
+
+### Install
+
+Run `pnpm install` from the repository root. The root `postinstall` hook will create `apps/api/backend/.venv` and install the FastAPI requirements there.
 
 Without global `turbo`, use your package manager:
 
