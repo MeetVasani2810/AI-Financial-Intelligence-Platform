@@ -1,0 +1,72 @@
+# Virtual Environment
+venv/
+.venv/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment Variables
+.env
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Build Files
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Mypy
+.mypy_cache/
+
+# Ruff
+.ruff_cache/
+
+# Temporary Files
+temp/
+tmp/
+
+# Model Files (future)
+models/
+*.pt
+*.pth
+*.bin
+
+# Hugging Face Cache
+.cache/
+huggingface/
+
+# Gemini / AI Generated Outputs
+outputs/
+
+# Local Database (future)
+*.db
+*.sqlite3
+
+# Environment Configs
+.env.local
+.env.production
+
+# Secrets
+secrets.json
+credentials.json
