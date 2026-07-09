@@ -1,14 +1,18 @@
-from transformers import pipeline
+classifier = None
 
-
-classifier = pipeline(
-    "sentiment-analysis",
-    model="ProsusAI/finbert",
-    tokenizer="ProsusAI/finbert"
-)
+def get_classifier():
+    global classifier
+    if classifier is None:
+        from transformers import pipeline
+        classifier = pipeline(
+            "sentiment-analysis",
+            model="ProsusAI/finbert",
+            tokenizer="ProsusAI/finbert"
+        )
+    return classifier
 def analyze_sentiments(texts :list[str]):
-
-    result=classifier(texts)
+    classifier_fn = get_classifier()
+    result=classifier_fn(texts)
     clean_response = []
 
     for prediction in result:
@@ -21,8 +25,8 @@ def analyze_sentiments(texts :list[str]):
     return clean_response
 
 def analyze_sentiment(text: str):
-
-    prediction = classifier(text)[0]
+    classifier_fn = get_classifier()
+    prediction = classifier_fn(text)[0]
 
     return {
         "sentiment": prediction["label"],
